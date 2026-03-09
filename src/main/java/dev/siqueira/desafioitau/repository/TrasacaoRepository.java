@@ -14,11 +14,11 @@ public class TrasacaoRepository {
         listaTransacoes.add(transacao);
     }
 
-    public void limparTransacao(TransacaoRequest transacao){
+    public void limparTransacoes(TransacaoRequest transacao){
 
     }
 
-    public void deletarTransacao(){
+    public void deletarTransacoes(){
         listaTransacoes.clear();
     }
 }
