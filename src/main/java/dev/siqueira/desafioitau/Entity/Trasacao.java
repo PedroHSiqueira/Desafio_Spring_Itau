@@ -1,4 +1,4 @@
-package dev.siqueira.desafioitau.dto;
+package dev.siqueira.desafioitau.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
