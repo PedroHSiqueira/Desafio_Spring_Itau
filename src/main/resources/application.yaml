@@ -1,3 +1,5 @@
 spring:
   application:
     name: Desafio_Spring_Itau
+estatistica:
+  segundos: 60
