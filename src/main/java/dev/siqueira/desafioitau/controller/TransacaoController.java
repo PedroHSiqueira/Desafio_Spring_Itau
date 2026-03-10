@@ -32,11 +32,11 @@ public class TransacaoController {
             return ResponseEntity.status(HttpStatus.CREATED).build();
 
         } catch (IllegalArgumentException e) {
-            log.info("Ocorreu um erro na passagem dos parametros para formularios! tente novamente");
+            log.error("Ocorreu um erro na passagem dos parametros para formularios! tente novamente");
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).build();
         } catch (Exception e) {
 
-            log.info("Ocorreu um erro interno no sistema! tente novamente");
+            log.error("Ocorreu um erro interno no sistema! tente novamente");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
