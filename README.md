@@ -45,7 +45,7 @@ Este comando irá:
 - Limpar o diretório `target/`
 - Compilar o código fonte
 - Executar os testes
-- Gerar o arquivo JAR em `target/itauJava10x-0.0.1-SNAPSHOT.jar`
+- Gerar o arquivo JAR em `target/desafioitau-0.0.1-SNAPSHOT.jar`
 
 ### Build sem executar testes
 
@@ -74,13 +74,13 @@ mvnw.cmd spring-boot:run
 Após fazer o build, você pode executar o JAR diretamente:
 
 ```bash
-java -jar target/itauJava10x-0.0.1-SNAPSHOT.jar
+java -jar target/desafioitau-0.0.1-SNAPSHOT.jar
 ```
 
 ### Opção 3: Executando a classe principal
 
 ```bash
-./mvnw exec:java -Dexec.mainClass="dev.java10x.itauJava10x.ItauJava10xApplication"
+./mvnw exec:java -Dexec.mainClass="dev.siqueira.desafioitau.DesafioSpringItauApplication"
 ```
 
 ### Verificando se a aplicação está rodando
@@ -114,7 +114,7 @@ mvn test
 ### Executando um teste específico
 
 ```bash
-./mvnw test -Dtest=ItauJava10xApplicationTests
+./mvnw test -Dtest=DesafioSpringItauApplicationTests
 ```
 
 ### Visualizando relatórios de teste
@@ -202,10 +202,14 @@ itauJava10x/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── dev/java10x/itauJava10x/
-│   │   │       ├── Estatisticas/      # Controllers e DTOs de estatísticas
-│   │   │       ├── Transacoes/        # Controllers, Services e Repository de transações
-│   │   │       └── ItauJava10xApplication.java
+│   │   │   └── dev/siqueira/desafioitau/
+│   │   │       ├── Entity/
+│   │   │       ├── Config/
+│   │   │       ├── Controller/
+│   │   │       ├── Dto/
+│   │   │       ├── Repository/
+│   │   │       ├── Service/
+│   │   │       └── DesafioSpringItauApplication.java
 │   │   └── resources/
 │   │       └── application.yml        # Configurações da aplicação
 │   └── test/
