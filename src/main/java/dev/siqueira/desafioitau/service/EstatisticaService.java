@@ -22,7 +22,7 @@ public class EstatisticaService {
     }
 
     public Estatistica gerarEstatistica(List<TransacaoRequest> listTransacoes){
-        OffsetDateTime horaInicial = OffsetDateTime.now().minusDays(estatisticaProperties.segundos());
+        OffsetDateTime horaInicial = OffsetDateTime.now().minusSeconds(estatisticaProperties.segundos());
 
         if (listTransacoes.isEmpty()){
             return new Estatistica(0L,0.0D,0.0D,0.0D,0.0D);
