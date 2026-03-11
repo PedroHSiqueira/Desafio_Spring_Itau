@@ -5,6 +5,9 @@ import dev.siqueira.desafioitau.config.EstatisticaProperties;
 import dev.siqueira.desafioitau.dto.TransacaoRequest;
 import dev.siqueira.desafioitau.repository.TrasacaoRepository;
 import dev.siqueira.desafioitau.service.EstatisticaService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.naming.Name;
 import java.util.List;
 
 @Slf4j
 @RestController
 @RequestMapping("/estatistica")
+@Tag(name = "Estatisticas", description = "Gera um JSON com as estatisticas em um intervalo de tempo definido pelo usuário")
 public class EstatisticasController {
 
     private final EstatisticaService estatisticaService;
@@ -30,6 +35,8 @@ public class EstatisticasController {
     }
 
     @GetMapping
+    @Operation(summary = "Gera o Json", description = "Retorna um JSON com o resumo das operações realizadas")
+    @ApiResponse(responseCode = "200", description = "Relatório gerado com sucesso!")
     public ResponseEntity<Estatistica> recuperarEstatisticas(){
         log.info("Calculando Estatisticas de transações no ultimos " + estatisticaProperties.segundos() + "s : ");
 
