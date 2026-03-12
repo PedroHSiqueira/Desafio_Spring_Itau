@@ -49,6 +49,8 @@ public class TransacaoController {
     }
 
     @DeleteMapping
+    @Operation(summary = "Deleta Transação", description = "Limpa a lista de transações")
+    @ApiResponse(responseCode = "200", description = "Lista limpa com sucesso!")
     public ResponseEntity<Void> deletar(){
         trasacaoRepository.deletarTransacoes();
 

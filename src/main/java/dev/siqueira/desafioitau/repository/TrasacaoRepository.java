@@ -14,8 +14,6 @@ public class TrasacaoRepository {
         listaTransacoes.add(transacao);
     }
 
-    public void limparTransacoes(TransacaoRequest transacao){}
-
     public void deletarTransacoes(){
         listaTransacoes.clear();
     }
