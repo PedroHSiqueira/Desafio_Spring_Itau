@@ -3,3 +3,18 @@ spring:
     name: Desafio_Spring_Itau
 estatistica:
   segundos: 60
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+    access:
+      default: none
+  endpoint:
+    health:
+      access: unrestricted
+      show-details: always
+    prometheus:
+      access: unrestricted
+
