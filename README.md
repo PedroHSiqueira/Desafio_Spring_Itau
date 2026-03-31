@@ -238,6 +238,21 @@ Certifique-se de que o arquivo `mvnw` tem permissão de execução:
 chmod +x mvnw
 ```
 
+---
+
+# 🧪 Diferenciais Implementados
+
+Embora não tenham sido solicitados no desafio original, foram adicionados recursos com foco em **qualidade, testes e observabilidade**:
+
+- ✅ Testes unitários com **JUnit 5** e **Mockito**
+- ✅ Métricas e health checks com **Spring Boot Actuator**
+- ✅ Monitoramento com **Prometheus**
+- ✅ Dashboards com **Grafana**
+
+Esses itens foram incluídos com objetivo de estudo e para demonstrar conhecimentos além do escopo solicitado.
+
+---
+
 ## 📝 Notas
 
 - A aplicação armazena transações em memória (não persiste em banco de dados)
